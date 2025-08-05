@@ -1995,7 +1995,8 @@ impl LoginConfigHandler {
         } else if name == "allow_swap_key" {
             config.allow_swap_key.v = !config.allow_swap_key.v;
         } else if name == "view-only" {
-            config.view_only.v = !config.view_only.v;
+            // config.view_only.v = !config.view_only.v;
+            config.view_only.v = true;
             let f = |b: bool| {
                 if b {
                     BoolOption::Yes.into()
